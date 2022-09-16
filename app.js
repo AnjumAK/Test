@@ -13,7 +13,7 @@ await server.start();
 server.route({
 methid : 'GET',
 path :'
-handler (‘/posts/comments’, (request, response) => {
+handler (‘'https://jsonplaceholder.typicode.com/posts/comments',’, (request, response) => {
       const user = new User({
          title : request.title,
          body : request.body,
