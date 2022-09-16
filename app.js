@@ -10,22 +10,29 @@ mongoose.connect(‘URL’, () => {
 })
 const init = async () => {
 await server.start();
-server.route({
-methid : 'GET',
-path :'
-handler (‘'https://jsonplaceholder.typicode.com/posts/comments',’, (request, response) => {
-      const user = new User({
-         title : request.title,
-         body : request.body,
-         comments : request.comments,
+fetch('https://jsonplaceholder.typicode.com/posts/comments' , { 
+method : 'GET',
+.then(res => { 
+   if(res.ok) { console.log("GET request")}
+   else { console.log("GET not success")}
+return res
+});
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(error => console.log(error))
        
-      });
-server.route({
-methid : 'POST',
-path :'
-handler (‘'https://jsonplaceholder.typicode.com/posts/comments',’, (request, response) => {
-      const user = new User({
-         title : request.title,
-         body : request.body,
-         comments : request.comments,
-      });
+  
+fetch('https://jsonplaceholder.typicode.com/posts/comments' , {
+method : 'POST'
+   headers: {
+'Content-type' : 'application/json'
+},
+body : JSON.stringfy(
+      {
+      "name": "john",
+      "email": "john@doe.com",
+      "body": "example body"
+      }
+}
+})
+ .then((res) => console.log(res))
