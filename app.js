@@ -20,3 +20,12 @@ handler (‘'https://jsonplaceholder.typicode.com/posts/comments',’, (request,
          comments : request.comments,
        
       });
+server.route({
+methid : 'POST',
+path :'
+handler (‘'https://jsonplaceholder.typicode.com/posts/comments',’, (request, response) => {
+      const user = new User({
+         title : request.title,
+         body : request.body,
+         comments : request.comments,
+      });
