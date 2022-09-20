@@ -24,6 +24,7 @@ return res
   
 fetch('https://jsonplaceholder.typicode.com/posts/comments' , {
 method : 'POST'
+PATH : './comments/{ID}',
    headers: {
 'Content-type' : 'application/json'
 },
